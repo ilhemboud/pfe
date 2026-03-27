@@ -11,11 +11,11 @@ public class LigneTypeDemande {
     private LigneTypeDemandeId ligneTypeDemandeId;
 
     @ManyToOne
-    @JoinColumn(name="id_departement")
+    @JoinColumn(name="id_departement", insertable=false, updatable=false)
     private Departement departement;
 
     @ManyToOne
-    @JoinColumn(name="id_type")
+    @JoinColumn(name="id_type", insertable=false, updatable=false)
     private TypeDemande typeDemande;
 
 }

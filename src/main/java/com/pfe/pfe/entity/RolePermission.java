@@ -10,10 +10,10 @@ public class RolePermission {
     private RolePermissionId rolePermissionId;
 
     @ManyToOne
-    @JoinColumn(name="id_role")
+    @JoinColumn(name="id_role", insertable=false, updatable=false)
     private Role role;
 
     @ManyToOne
-    @JoinColumn(name="id_permission")
+    @JoinColumn(name="id_permission", insertable=false, updatable=false)
     private Permission permission;
 }

@@ -16,11 +16,11 @@ public class DemandeEtatDetail {
     private Date dateEtat;
 
     @ManyToOne
-    @JoinColumn(name="id_demande")
+    @JoinColumn(name="id_demande", insertable=false, updatable=false)
     private Demande demande;
  
     @ManyToOne
-    @JoinColumn(name="id_etat")
+    @JoinColumn(name="id_etat", insertable=false, updatable=false)
     private EtatDemande etatDemande;
 
 }
