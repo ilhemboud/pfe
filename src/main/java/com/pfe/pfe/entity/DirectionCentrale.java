@@ -1,11 +1,14 @@
 package com.pfe.pfe.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "direction_centrale")
 
-
+@Getter
+@Setter
 public class DirectionCentrale {
     @Id
     @Column(name="id_directioncentrale")

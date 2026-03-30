@@ -3,9 +3,16 @@ package com.pfe.pfe.entity;
 import java.sql.Date;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "demande")
+
+
+@Getter
+@Setter
+
 @Inheritance(strategy = InheritanceType.JOINED)
 
 public class Demande {

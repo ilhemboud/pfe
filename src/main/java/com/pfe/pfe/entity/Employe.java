@@ -3,9 +3,14 @@ package com.pfe.pfe.entity;
 import java.sql.Date;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "employe")
+
+@Getter
+@Setter
 
 public class Employe extends Utilisateur {
  

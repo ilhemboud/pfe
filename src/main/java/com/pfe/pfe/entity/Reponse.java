@@ -3,9 +3,14 @@ package com.pfe.pfe.entity;
 import java.sql.Date;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "reponse")
+
+@Getter
+@Setter
 
 public class Reponse {
     @Id

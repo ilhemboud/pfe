@@ -1,10 +1,14 @@
 package com.pfe.pfe.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "direction")
 
+@Getter
+@Setter
 public class Direction {
     @Id
     @Column(name="id_direction")

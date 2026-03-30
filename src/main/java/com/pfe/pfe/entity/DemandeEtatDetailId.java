@@ -4,9 +4,12 @@ package com.pfe.pfe.entity;
 import java.io.Serializable;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Embeddable
-
+@Getter
+@Setter
 public class DemandeEtatDetailId implements Serializable{
     
     @Column(name="id_demande")

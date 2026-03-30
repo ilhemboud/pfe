@@ -1,11 +1,15 @@
 package com.pfe.pfe.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "departement")
 
+@Getter
 
+@Setter
 public class Departement {
     @Id
     @Column(name="id_departement")
