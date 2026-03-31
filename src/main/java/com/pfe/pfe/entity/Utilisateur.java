@@ -31,5 +31,8 @@ public class Utilisateur {
     
       @Column(name="etat_compte")
     private String etatCompte;
+
+    @Column(name="mot_de_passe")
+    private String motDePasse;
    
 }
