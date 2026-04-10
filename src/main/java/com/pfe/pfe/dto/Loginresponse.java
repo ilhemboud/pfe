@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Loginresponse {
-    private string token;
+public class LoginResponse {
+    private String token;
 
-    public Loginresponse(string token){
+    public LoginResponse(String token){
         this.token = token;
     }
     
