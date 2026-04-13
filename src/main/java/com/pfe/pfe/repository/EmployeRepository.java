@@ -8,4 +8,6 @@ import com.pfe.pfe.entity.Employe;
 @Repository
 public interface EmployeRepository extends JpaRepository<Employe, Integer>{
     
+    boolean existsByEmailUtil(String emailUtil);
+    
 }
