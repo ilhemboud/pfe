@@ -36,7 +36,7 @@ private UserDetailServiceImpl userDetailsService;
             // définir les routes publiques et privées
             .authorizeHttpRequests(auth -> auth
                 // routes publiques
-                .requestMatchers("/auth/login", "/auth/register").permitAll()
+                .requestMatchers("/auth/login", "/auth/register/client", "/auth/register/employe" ).permitAll()
                 // routes privées
                 .requestMatchers("/Api/employes/").hasAnyRole("ADMIN", "EMPLOYE")
                 .requestMatchers("/Api/clients/").hasAnyRole("ADMIN", "EMPLOYE")
