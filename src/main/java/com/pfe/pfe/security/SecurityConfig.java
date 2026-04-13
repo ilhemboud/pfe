@@ -38,9 +38,9 @@ private UserDetailServiceImpl userDetailsService;
                 // routes publiques
                 .requestMatchers("/auth/login", "/auth/register/client", "/auth/register/employe" ).permitAll()
                 // routes privées
-                .requestMatchers("/Api/employes/").hasAnyRole("ADMIN", "EMPLOYE")
-                .requestMatchers("/Api/clients/").hasAnyRole("ADMIN", "EMPLOYE")
-                .requestMatchers("/Api/utilisateurs/").hasRole("ADMIN")
+                .requestMatchers("/Api/employes/**").hasAnyRole("ADMIN", "EMPLOYE")
+                .requestMatchers("/Api/clients/**").hasAnyRole("ADMIN", "EMPLOYE")
+                .requestMatchers("/Api/utilisateurs/**").hasRole("ADMIN")
                 // tout le reste nécessite une authentification
                 .anyRequest().authenticated()
             )
