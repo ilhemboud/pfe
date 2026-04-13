@@ -14,6 +14,7 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Utilisateur {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_util")
     private int idUtil;
 
