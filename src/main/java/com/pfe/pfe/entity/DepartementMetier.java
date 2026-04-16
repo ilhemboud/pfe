@@ -5,21 +5,22 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ligne_type_demande")
-
+@Table(name = "metier_departement")
 @Getter
 @Setter
-public class LigneTypeDemande {
+
+public class DepartementMetier {
    
     @EmbeddedId
-    private LigneTypeDemandeId ligneTypeDemandeId;
+    private DepartementMetierId departementMetierId;
 
     @ManyToOne
     @JoinColumn(name="id_departement", insertable=false, updatable=false)
     private Departement departement;
 
     @ManyToOne
-    @JoinColumn(name="id_type", insertable=false, updatable=false)
-    private TypeDemande typeDemande;
+    @JoinColumn(name="id_metier", insertable=false, updatable=false)
+    private metier metier;
 
 }
+

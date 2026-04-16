@@ -9,11 +9,11 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-public class LigneTypeDemandeId implements Serializable{
+public class DepartementMetierId implements Serializable{
   
     @Column(name="id_departement")
     private int idDepartement;
 
-    @Column(name="id_type")
-    private int idType;
+    @Column(name="id_metier")
+    private int idmetier;
 }

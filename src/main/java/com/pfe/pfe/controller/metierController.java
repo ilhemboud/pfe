@@ -12,40 +12,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pfe.pfe.entity.TypeDemande;
-import com.pfe.pfe.service.TypeDemandeService;
+import com.pfe.pfe.entity.metier;
+import com.pfe.pfe.service.metierService;
 
 @RestController
-@RequestMapping("/api/typeDemande")
-public class TypeDemandeController {
+@RequestMapping("/api/metiers")
+public class metierController {
     
 
     @Autowired
-    private TypeDemandeService typeDemandeService;
+    private metierService metierService;
 
     @GetMapping
-    public List<TypeDemande> findAll(){
-        return typeDemandeService.findAll();
+    public List<metier> findAll(){
+        return metierService.findAll();
     }
 
     @GetMapping("/{id}")
-    public TypeDemande findById(@PathVariable int id){
-        return typeDemandeService.findById(id);
+    public metier findById(@PathVariable int id){
+        return metierService.findById(id);
     }
 
     @PostMapping
-    public TypeDemande save(@RequestBody TypeDemande typeDemande){
-        return typeDemandeService.save(typeDemande);
+    public metier save(@RequestBody metier metier){
+        return metierService.save(metier);
     }
 
     @PutMapping("/{id}")
-    public TypeDemande update(@PathVariable int id, @RequestBody TypeDemande typeDemande){
-        return typeDemandeService.save(typeDemande);
+    public metier update(@PathVariable int id, @RequestBody metier metier){
+        return metierService.save(metier);
     }
 
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable int id){
-        typeDemandeService.deleteById(id);
+        metierService.deleteById(id);
     }
 
 

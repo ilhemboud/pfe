@@ -7,10 +7,10 @@ import lombok.Setter;
 import java.io.Serializable;
 
 @Embeddable
-
 @Getter
 @Setter
-public class RoleEmployeId implements Serializable{
+
+public class RoleUtilisateurId implements Serializable{
     @Column(name="id_util")
     private int idUtil;
 

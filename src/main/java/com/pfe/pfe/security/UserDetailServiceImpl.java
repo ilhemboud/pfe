@@ -11,11 +11,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
 import com.pfe.pfe.entity.Employe;
-import com.pfe.pfe.entity.RoleEmploye;
+import com.pfe.pfe.entity.RoleUtilisateur;
 import com.pfe.pfe.entity.Utilisateur;
-import com.pfe.pfe.repository.RoleEmployeRepository;
+import com.pfe.pfe.repository.RoleUtilisateurRepository;
 import com.pfe.pfe.repository.UtilisateurRepository;
 
 @Service
@@ -25,7 +24,7 @@ public class UserDetailServiceImpl implements UserDetailsService{
 private UtilisateurRepository utilisateurRepository;
 
 @Autowired
-private RoleEmployeRepository roleEmployeRepository;
+private RoleUtilisateurRepository roleUtilisateurRepository;
 
 
 @Override
@@ -39,11 +38,11 @@ public UserDetails loadUserByUsername(String email) throws UsernameNotFoundExcep
 
   if(utilisateur instanceof Employe employe){
    
-   List<RoleEmploye> rolesEmploye= roleEmployeRepository.findByRoleEmployeId_IdUtil(employe.getIdUtil());
+   List<RoleUtilisateur> rolesUtilisateur= roleUtilisateurRepository.findByRoleUtilisateurId_IdUtil(utilisateur.getIdUtil());
        
-  for(RoleEmploye roleEmploye: rolesEmploye){
+  for(RoleUtilisateur roleUtilisateur: rolesUtilisateur){
 
-      authorities.add( new SimpleGrantedAuthority("ROLE_"+ roleEmploye.getRole().getNomRole()));     
+      authorities.add( new SimpleGrantedAuthority("ROLE_"+ roleUtilisateur.getRole().getNomRole()));     
 
   }
    
